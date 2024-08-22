@@ -1,0 +1,75 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    max-width: 1200px;
+    background-color: var(--green-lighter);
+    padding: 25px;
+    gap: 24px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+   gap: 16px;
+    
+
+}
+.multi-input{
+    display: flex;
+    gap: 16px;
+    
+   
+}
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+input, textarea{
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid black;
+    background-color: #fff;
+}
+
+textarea{
+    height: 100px;
+}
+
+.radio{
+    border: 1px solid black;
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.radio input, .checkbox input{
+    margin-right: 12px;
+}
+
+:root{
+--green-lighter: hsl(148, 38%, 91%);
+--green-medium: hsl(169, 82%, 27%);
+--red: hsl(0, 66%, 54%);
+
+
+--white: hsl(0, 0%, 100%);
+--grey-medium: hsl(186, 15%, 59%);
+--grey-darker: hsl(187, 24%, 22%);
+}

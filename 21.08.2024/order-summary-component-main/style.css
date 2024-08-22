@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    background: url(images/pattern-background-desktop.svg) no-repeat;
+    background-size: contain;
+    background-color: var(--pale-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+main {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 375px;
+    border-radius: 24px;
+    overflow: hidden;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+figure>img {
+    width: 100%;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 24px;
+}
+
+.order-sum h1 {
+    margin-bottom: 12px;
+    color: var(--dark-blue);
+}
+.plan-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 8px;
+    padding: 10px 25px;
+    background-color: var(--very-pale-blue);
+}
+.plan-container figure>img{
+    width: 50px;
+}
+
+.plan-container .plan {
+    margin-left: 16px;
+    margin-right: 64px;
+}
+
+.plan-container .plan h4 {
+    color: var(--dark-blue);
+    font-weight: 700;
+}
+
+
+a{
+    cursor: pointer;
+}
+
+.btn-change {
+    text-decoration: underline;
+    color: var(--bright-blue);
+}
+
+.btn-proceed {
+    background-color: var(--bright-blue);
+    width: 100%;
+    padding: 1rem;
+    border-radius: 16px;
+    color: var(--very-pale-blue);
+    font-weight: 700;
+}
+
+.btn-proceed:active{
+    opacity: 0.8;
+}
+
+.btn-cancel{
+    font-weight: 700;
+    color: var(--desaturated-blue);
+}
+
+.btn-cancel:active{ 
+    font-weight: 700;
+    color: var(--dark-blue);
+}
+
+p{
+    color: var(--desaturated-blue);
+    font-weight: 500;
+}
+
+:root{
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+
+
+
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+@media screen and ( max-width: 375px) {
+
+    main{
+        max-width:100%;
+        
+    }
+    .container{
+        max-width:100%;
+    }
+
+    .plan-container .plan {
+        margin: 0 16px;
+        
+    }
+
+}
