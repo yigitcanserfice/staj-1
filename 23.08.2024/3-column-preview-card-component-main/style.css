@@ -1,0 +1,112 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap');
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: 15px;
+    background-color: var(--very-light-gray);
+    font-family: "Lexend Deca", sans-serif;
+    gap: 12px
+    
+}
+
+main{
+    display: flex;
+    width: 80%;
+    max-width: 900px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 36px ;
+    padding: 45px;
+    line-height: 1.6rem;
+}
+.card h1 {
+    color: var(--very-light-gray);
+    font-family: "Big Shoulders Display", sans-serif;
+    font-weight: 700;
+}
+.card p {
+    color: var(--transparent-white);
+   
+}
+
+.sedan{
+    background-color: var(--bright-orange);
+}
+.suv{
+    background-color: var(--dark-cyan);
+}
+.lux{
+    background-color: var(--very-dark-cyan);
+}
+
+.card a{
+    margin-top: 64px;
+    text-decoration: none;
+    width: 80%;
+    background-color: var(--very-light-gray);
+    padding: 10px 15px;
+    text-align: center;
+    border-radius: 50px;
+    font-weight: bold;
+    border: 2px solid var(--very-light-gray);
+    
+}
+.sedan a{
+    color: var(--bright-orange);
+}
+.suv a{
+    color: var(--dark-cyan);
+}
+.lux a{
+    color: var(--very-dark-cyan);
+}
+.card a:hover{
+    background-color: inherit;
+    color: var(--very-light-gray);
+    
+}
+
+
+:root{
+
+
+--bright-orange: hsl(31, 77%, 52%);
+--dark-cyan: hsl(184, 100%, 22%);
+--very-dark-cyan: hsl(179, 100%, 13%);
+
+
+
+--transparent-white : hsla(0, 0%, 100%, 0.75);/*(paragraphs)*/
+--very-light-gray: hsl(0, 0%, 95%); /* (background, headings, buttons)*/
+}
+
+@media screen and (max-width:600px) {
+    body{
+        height: 100%;
+        margin: 42px  0;
+       
+    }
+    main{
+        
+        flex-direction: column;
+    }
+    
+}
