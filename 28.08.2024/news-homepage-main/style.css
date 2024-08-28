@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column; 
+    gap: 48px;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.container{
+    width: 75%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+p{
+    font-size: 15px;
+    line-height: 150%;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+ 
+header nav ul{
+    display: flex;
+    list-style: none;
+    gap: 24px;
+    
+}
+header nav ul a{
+    color: var(--dark-grayish-blue);
+}
+main{
+    display: flex;
+    gap: 36px;
+}
+main .col-left{
+    width: 66.6%;
+}
+main .col-left .top img{
+    width: 100%;
+    object-fit: cover;
+}
+main .col-left .bottom{
+    display: flex;
+    margin-top: 24px;
+    gap: 12px;
+}
+main .col-left h1 {
+    font-size: 52px;
+    font-weight: 800;   
+}
+main .col-left .bottom .text{
+    position: relative;
+    
+}
+.read-more{
+    position: absolute;
+    bottom: 0;
+    background-color: var(--soft-red);
+    text-align: center;
+    padding: 16px 32px;
+    color: var(--very-dark-blue);
+    font-weight: 700; 
+    letter-spacing:0.2rem;
+}
+
+main .col-left .title,
+main .col-left .text{
+    color: var(--dark-grayish-blue);
+    width: 50%;
+  
+}
+main .col-left .title{
+    color: var(--very-dark-blue);
+}
+main .col-right{
+    width: 33.3%;
+}
+main .col-right{
+    background-color: var(--very-dark-blue);
+    color: var(--grayish-blue);
+    padding: 36px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+main .col-right>h1{
+    color: var(--soft-orange);
+    font-size: 48px;
+}
+main .col-right .text h1{
+    color: var(--off-white);
+    margin-bottom: 8PX;
+}
+main .col-right .text{
+    margin-top: 32px;
+}
+main .col-right .text-container{
+    
+}
+main .col-right .border{
+    padding: 32px 0;
+    border-top: 1px solid var(--dark-grayish-blue);
+    border-bottom: 1px solid var(--dark-grayish-blue);
+}
+
+footer{
+    display: flex;
+    gap: 48px;
+    height: 120px;
+    
+}
+
+.list-item{
+    display: flex;
+    width: 33%;
+    height: 100%;
+    gap: 24px;
+}
+.list-item img{
+   object-fit: cover;
+}
+.list-text{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    color: var(--dark-grayish-blue);
+}
+.list-text h2{
+    color: var(--soft-red);
+    font-size: 32px;
+}
+.list-text h3{
+    color: var(--very-dark-blue);
+    font-weight: 800;
+}
+
+
+:root{
+    --soft-orange: hsl(35, 77%, 62%);
+    --soft-red: hsl(5, 85%, 63%);
+
+    --off-white: hsl(36, 100%, 99%);
+    --grayish-blue: hsl(233, 8%, 79%);
+    --dark-grayish-blue: hsl(236, 13%, 42%);
+    --very-dark-blue: hsl(240, 100%, 5%);
+}
