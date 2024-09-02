@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,400;1,800&display=swap');
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--light-grey);
+    gap: 24px;
+
+}
+main{
+    background-color: var(--white);
+    max-width: 1280px;
+    width: 50%;
+    padding: 60px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    color: var(--smokey-grey);
+    border-radius: 24px 24px 128px 24px;
+}
+form{
+    width: 75%;
+    display: flex;
+    gap: 24px;
+    
+}
+form div{
+    width: 30%;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    text-transform: uppercase;
+    
+}
+
+form div input {
+    border-radius: 8px;
+    border: 1px solid var(--light-grey);
+    padding: 10px;
+    font-weight: 800;
+    font-size: 32px;
+}
+.border-logo{
+    margin: 48px 0;
+    position: relative;
+}
+.border-logo .border{
+    display: block;
+    z-index: 1;
+    border-bottom: 1px solid var(--light-grey);
+}
+
+.border-logo .logo{
+    position: absolute;
+    top: -40px;
+    z-index: 10;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--purple);
+}
+
+.results h1{
+    color: var(--off-black);
+    font-size: 92px;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.results h1 span {
+    color: var(--purple);
+}
+
+:root{
+
+    --purple: hsl(259, 100%, 65%);;
+    --light-red: hsl(0, 100%, 67%);
+
+
+    --white: hsl(0, 0%, 100%);
+    --off-white: hsl(0, 0%, 94%);
+    --light-grey: hsl(0, 0%, 86%);
+    --smokey-grey: hsl(0, 1%, 44%);
+    --off-black: hsl(0, 0%, 8%);
+
+}
+
+@media screen and (max-width:768px) {
+    main{
+        width: 90%;
+        padding: 25px;
+    }
+    .results h1{
+        font-size: 52px;
+        
+    }
+    .border-logo .logo{
+        left: calc( 50% - 25px );
+       
+    }
+
+    .border-logo{
+        margin: 72px 0;
+       
+    }
+    form{
+        width: 100%;
+    }
+    form div input {
+
+        font-size: 24px;
+    }
+}
+@media screen and (max-width:1220px ) and (min-width:768px) {
+    .results h1{
+        font-size: 72px;
+        
+    }
+    
+   
+}
