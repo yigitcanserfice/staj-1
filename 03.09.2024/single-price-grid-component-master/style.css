@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--light-gray);
+    font-size: 16px;
+    font-family: "Karla", sans-serif;
+    gap: 24px;
+}
+
+main{
+   
+    flex-direction: column;
+    border-radius: 12px;
+    width: 40%;
+    max-width: 620px;
+    border-radius: 10px;
+    overflow: hidden;
+}   
+.card-top{
+    background-color: #fff;
+    padding: 45px;
+    color: var(--grayish-blue);
+    line-height: 150%;
+}
+
+.card-top h2{
+    color: var(--cyan);
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+.card-top h3{
+    color: var(--bright-yellow);
+    font-weight: 700;
+    margin-bottom: 12px
+}
+
+
+.card-bottom{
+    display: flex;
+    color: #fff;
+}
+
+.card-bottom .bottom-left,
+.card-bottom .bottom-right{
+    padding: 45px;
+    flex: 1;
+    
+}
+.card-bottom .bottom-left{
+    background-color: var(--cyan);
+    display: flex;
+    flex-direction: column;
+   
+}
+.card-bottom .bottom-right{
+    background-color: var(--light-cyan);
+}
+.card-bottom .bottom-left .payment{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 16px 0;
+}
+.card-bottom .bottom-left .payment .price{
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+}
+.card-bottom .bottom-left .payment p{
+    color: var(--light-gray);
+}
+
+.card-bottom .bottom-left a{
+    text-decoration: none;
+    background-color: var(--bright-yellow);
+    padding: 16px;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 24px;
+    font-weight: 700;
+    color: #fff;
+}
+.card-bottom .bottom-right p{
+    margin-top: 16px;
+    color: var(--light-gray);
+    line-height: 150%;
+    font-size: 14px;
+}
+:root{
+    --cyan: hsl(179, 62%, 43%);
+    --light-cyan: hsl(179, 45%, 53%);
+    --bright-yellow: hsl(71, 73%, 54%);
+
+
+
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+}
+
+@media screen and (max-width:768px) {
+    main {
+        width: 80%;
+    }
+    
+.card-bottom{
+    flex-direction: column;
+}
+.card-top,
+.card-bottom .bottom-left,
+.card-bottom .bottom-right{
+    padding: 25px;
+}
+    
+}
