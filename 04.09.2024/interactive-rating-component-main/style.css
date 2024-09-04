@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
+   background-color: var(--very-dark-blue);
+   font-family: "Overpass", sans-serif;
+}
+h1{
+    color:var(--white)
+}
+p{
+    font-size: 14px;
+    color: var(--light-grey);
+    line-height: 150%;
+}
+
+/* Normal durumda main içeriği */
+main {
+    width: 30%; /* Genişlik sabit kalacak */
+    max-width: 475px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    background-color: var(--dark-blue);
+    padding: 32px;
+    border-radius: 24px;
+    min-height: 300px; /* Yüksekliği sabitlemek için minimum yükseklik */
+}
+
+/* Sadece 2. ekran geldiğinde içerikleri ortalamak için */
+main.centered {
+    align-items: center; /* İçerikleri yatay olarak ortala */
+    justify-content: center; /* İçerikleri dikey olarak ortala */
+    text-align: center; /* Textleri ortala */
+}
+
+
+.star-icon,
+.number{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    background-color: var(--dark-blue2);
+}
+
+
+.star-icon img{
+    width: 20px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+form .numbers{
+    display: flex;
+    justify-content: space-between;
+}
+form .numbers .number{
+    cursor: pointer;
+    color: var(--light-grey);
+    font-weight: 800;
+}
+form .numbers .number:hover{
+    cursor: pointer;
+    background-color: var(--orange);
+    color: var(--dark-blue);
+}
+form .numbers .number:active{
+    background-color: var(--white);
+    color: var(--dark-blue);
+}
+form .numbers .number.active{
+    background-color: var(--white);
+    color: var(--dark-blue);
+}
+
+
+form button {
+    background-color: var(--orange);
+    border: none;
+    padding: 12px 0;
+    border-radius: 24px;
+    color: var(--very-dark-blue);
+    font-weight: 800;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+form button:hover {
+    background-color: var(--white);
+}
+
+:root{
+
+    --orange: hsl(25, 97%, 53%);
+
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --dark-blue2: hsl(213, 19%, 28%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+.thank-you-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    background-color: var(--dark-blue2);
+}
+
+.thank-you-icon img {
+    width: 24px;
+}
+.text {
+display: flex;
+flex-direction: column;
+gap: 12px;
+}
+
+.text .title{
+    background-color: var(--dark-blue2);
+   
+    border-radius: 24px;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin:0 auto;
+    padding: 6px 0;
+}
+.text .title p{
+    color: var(--orange);
+}
+
+@media screen and (max-width:768px) {
+    main{
+        width: 85%;
+    }
+
+    .star-icon,
+    .number{
+    
+    width: 42px;
+    height: 42px;
+
+    }
+
+}
+@media screen and (max-width:1274px) and (min-width:768px) {
+    main{
+        width: 85%;
+    }
+}
