@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+body{
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 500;
+    width: 100%;
+    
+}
+main{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.main-left {
+    aspect-ratio: 1;
+    height: 100vh;
+    object-fit: cover;
+    position: relative;
+    background: url(images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    background-size: contain;    
+  }
+
+.main-left .card-front{
+    position: absolute;
+    right: 320px;
+    top: 150px;
+}
+
+.main-left .card-back{
+    position: absolute;
+    right: 250px;
+    top: 425px;
+}
+
+.main-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    
+  }
+  
+  input {
+    padding: 15px 20px;
+    border: 1px solid var(--light-grayish-violet);
+    border-radius: 8px;
+
+  }
+  input::placeholder{
+    color: var(--dark-grayish-violet);
+    font-weight: 500;
+    letter-spacing: 2px;
+  }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .exp-cvc {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .exp-date, .cvc-field {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .exp-inputs {
+    display: flex;
+    gap: 10px;
+  }
+  
+  #mm, #yy {
+    width: 45%;
+  }
+  
+  #cvc {
+    width: 100%;
+  }
+  
+  button {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: var(--very-dark-violet);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: var(--dark-grayish-violet);
+  }
+  .card-front {
+    position: absolute;
+    right: 320px;
+    top: 150px;
+    width: 455px; /* Kart boyutuna göre ayarlayın 447* */
+    height: 245px;
+  }
+  
+  .card-front img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  .card-back {
+    position: absolute;
+    right: 250px;
+    top: 425px;
+    width: 447px; /* Kart boyutuna göre ayarlayın */
+    height: 245px;
+  }
+  
+  .card-back img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .card-details, .cvc-details  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    color: white;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    pointer-events: none; /* Bu, metnin tıklanamaz olmasını sağlar */
+  }
+  
+  .card-number {
+    font-size: 24px;
+    letter-spacing: 6px;
+    text-align: center;
+    margin-top: 60px; /* Kart üzerindeki konuma göre ayarlayın */
+  }
+  .card-logo{
+    width: 100px;
+  }
+  .card-logo img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card-name {
+   
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: left;
+    margin-top: 40px; /* Kart üzerindeki konuma göre ayarlayın */
+  }
+  
+  .card-exp {
+   
+    right: 10px;
+    font-size: 16px;
+    text-align: right;
+    margin-top: -20px;  /*Kart üzerindeki konuma göre ayarlayın */
+  }
+  
+/* CVC Alanı */
+.cvc-details {
+    text-align: right;
+    padding-right: 50px; /* Görseldeki CVC alanına göre ayarlayın */
+  }
+  
+  .card-cvc {
+    font-size: 16px;
+    margin-top: 90px; /* Kart üzerindeki konuma göre ayarlayın */
+  }
+  
+
+
+/* Mobil tasarım için */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column; /* Üst üste sıralar */
+        align-items: flex-start;
+    }
+
+    .main-left {
+        width: 100%;
+        height: 40vh; /* Yükseklik ayarı mobil için küçüldü */
+        background: url(images/bg-main-mobile.png); /* Mobil için farklı bir görsel kullanılabilir */
+        background-size: cover;
+        position: relative;
+    }
+
+    .main-left .card-front {
+        right: 60%;
+        transform: translateX(50%);
+        top: 150px;
+        width: 300px; /* Kartın boyutunu küçültüyoruz */
+        height: 165px;
+        z-index: 10;
+    }
+
+    .main-left .card-back {
+        right: 40%;
+        transform: translateX(50%);
+        top: 25px;
+        z-index: 1;
+        width: 300px; /* Kartın boyutunu küçültüyoruz */
+        height: 165px;
+    }
+
+    form {
+        width: 90%;
+        margin: 70px auto;
+    }
+
+    .card-number, .card-name .card-exp {
+        font-size: 14px; /* Mobilde yazı boyutları küçülecek */
+        margin-top: 10px;
+       
+    }
+
+    .card-cvc {
+        font-size: 14px;
+        margin: 42px 20px;
+    }
+    .card-details, .cvc-details {
+        padding: 20px;
+        margin: 10px 0;
+    }
+    .card-details .card-logo{
+        width: 15%;
+    }
+
+}
+
+
+:root{
+
+    --linear-gradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%); /* active input border */
+    --red: hsl(0, 100%, 66%); /* input errors */
+    
+    --white: hsl(0, 0%, 100%);
+    --light-grayish-violet: hsl(270, 3%, 87%);
+    --dark-grayish-violet: hsl(279, 6%, 55%);
+    --very-dark-violet: hsl(278, 68%, 11%);
+    
+    }
