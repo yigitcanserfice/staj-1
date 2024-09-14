@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--light-grayish-blue-1);
+    font-family: "Plus Jakarta Sans", sans-serif;
+  
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    background-color: var(--white);
+    padding: 36px;
+    border-radius: 12px;
+    max-width: 725px;
+    position: absolute;
+}
+
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.top .left {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    text-align: center;
+} 
+.top .left .not-count{
+    padding: 3px 12px;
+    border-radius: 6px;
+    background-color: var(--blue);
+    color: var(--white);  
+}
+.notifications{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    
+}
+
+.notification{
+    display: flex;
+    
+    padding: 16px;
+    border-radius: 12px;
+    gap: 20px;
+    color: var(--dark-grayish-blue);
+}
+.not-message{
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+}
+.unread{
+    background-color: var(--light-grayish-blue-1);
+}
+
+
+.red-dot{
+    width: 10px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: var(--red);
+}
+
+.notification .avatar,
+.pic-post{
+    width: 40px;
+    aspect-ratio: 1;
+}
+
+.notification .avatar img,
+.pic-post img{
+    width: 100%;
+}
+
+.user-name{
+    font-weight: 800;
+    
+}
+
+.post-name{
+    font-weight: 700;
+    color: var(--dark-grayish-blue);
+   
+}
+
+.not-time{
+    font-weight: 700;
+    color: var(--grayish-blue);
+}
+
+.group{
+    color: var(--blue);
+    font-weight: 700;
+}
+
+.long-message{
+    margin-top: 16px;
+    border: 1px solid var(--light-grayish-blue-2);
+    border-radius: 12px;
+    padding: 15px;
+    width: 500px;
+}
+
+.pic-post{
+    position: absolute;
+    right: 60px;
+}
+
+a{
+    color: var(--dark-grayish-blue);
+    font-weight: 500;
+}
+
+:root {
+
+/* Primary */
+
+--red: hsl(1, 90%, 64%);
+--blue: hsl(219, 85%, 26%);
+
+/* Neutral */
+
+--white: hsl(0, 0%, 100%);
+--very-light-grayish-blue: hsl(210, 60%, 98%);
+--light-grayish-blue-1: hsl(211, 68%, 94%);
+--light-grayish-blue-2: hsl(205, 33%, 90%);
+--grayish-blue: hsl(219, 14%, 63%);
+--dark-grayish-blue: hsl(219, 12%, 42%);
+--very-dark-blue: hsl(224, 21%, 14%);
+}
+
