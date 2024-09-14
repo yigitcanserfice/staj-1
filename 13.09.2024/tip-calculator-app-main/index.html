@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <link rel="stylesheet" href="style.css">
+
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  
+</head>
+<body>
+  <h1>
+    spli<br>tter
+  </h1>
+  <main>
+    <div class="calc">
+      <form id="tipForm">
+        <label for="bill">Bill</label>
+        <div class="input-container">
+          <span class="sign"><img src="images/icon-dollar.svg" alt=""></span>
+          <input type="number" placeholder="0" id="bill" />
+        </div>
+
+        <label for="tip">Select Tip %</label>
+        <div class="tip-container">
+          <button type="button" class="tip-button" data-value="5">5%</button>
+          <button type="button" class="tip-button" data-value="10">10%</button>
+          <button type="button" class="tip-button" data-value="15">15%</button>
+          <button type="button" class="tip-button" data-value="25">25%</button>
+          <button type="button" class="tip-button" data-value="50">50%</button>
+          <!-- Custom Input (Styled as a button) -->
+          <input type="number" id="customTip" class="tip-button" placeholder="Custom" />
+        </div>
+
+        <label for="people">Number of People</label>
+        <div class="input-container" id="people-container">
+          <span class="sign"><img src="images/icon-person.svg" alt=""></span>
+          <input type="number" placeholder="0" id="people" />
+          <span id="zero-error" class="error-message">Can't be zero</span>
+        </div>
+      </form>
+    </div>
+    <div class="result">
+      <div class="result-top">
+        <div class="result-item">
+          <span>Tip Amount <br> <span class="person">/ person</span></span>
+          <span id="tipAmount">$0.00</span>
+        </div>
+        <div class="result-item">
+          <span>Total <br> <span class="person">/ person</span> </span>
+          <span id="totalAmount">$0.00</span>
+        </div>
+      </div>
+      <button type="button" id="reset">Reset</button>
+    </div>
+  </main>
+</body>
+
+
+
+ <script src="script.js"></script>
+</html>
+
+
+<!--
+
+  Select Tip %
+  5%
+  10%
+  15%
+  25%
+  50%
+  Custom
+
+  Number of People
+
+  Tip Amount
+  / person
+
+  Total
+  / person
+
+  Reset
+
+-->

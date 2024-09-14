@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: "Space Mono", monospace;
+    background-color: var(--light-grayish-cyan);
+    gap: 64px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+body>h1{
+  text-transform: uppercase;
+  color: var(--very-dark-cyan);
+  font-size: 24px;
+  letter-spacing: 10px;
+}
+
+main{
+    background-color: var(--white);
+    display: flex;
+    padding: 36px;
+    border-radius: 16px;
+    max-width: 900px;
+    gap: 48px;
+}
+
+.calc,
+.result{
+  flex: 1;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+label{
+  font-size: 16px;
+  color: var(--dark-grayish-cyan);
+  margin-bottom: -28px;
+
+}
+
+.input-container {
+    position: relative;
+    display: inline-block;
+    
+  }
+  
+  .sign {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: var(--light-grayish-cyan);
+  }
+  
+  input {
+    padding: 6px 20px; /* Adjust padding to accommodate the dollar sign */
+    text-align: end;
+    background-color: var(--very-light-grayish-cyan);
+    border: none;
+    border-radius: 6px;
+    width: 100%;
+    font-family: "Space Mono", monospace;
+    font-size: 24px;
+    font-weight: bold;
+
+  }
+  .tip-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    
+  }
+  
+  .tip-button {
+    background-color: var(--very-dark-cyan);
+    color: var(--white);
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "Space Mono", monospace;
+    text-align: center;
+    
+  }
+  
+  .tip-button.active {
+    background-color: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+  
+  }
+  
+  #customTip {
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: var(--very-light-grayish-cyan);
+    color: var(--very-dark-cyan);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  input:focus {
+    outline-color: var(--strong-cyan);
+    text-align: end;
+    
+  }
+  
+  .result{
+    background-color: var(--very-dark-cyan);
+    padding: 48px 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 16px;
+  }
+  
+  .result-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: var(--white);
+  }
+
+  .result-item .person{
+    color: var(--dark-grayish-cyan);
+    font-size: 12px;
+  }
+
+  #totalAmount,
+  #tipAmount{
+    color: var(--strong-cyan);
+    font-size: 36px;
+  }
+  
+  #reset {
+    background-color: var(--strong-cyan);
+    text-transform: uppercase;
+    color: var(--very-dark-cyan);
+    font-weight: bold;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .error-message {
+    display: none;
+    position: absolute;
+    top: -20px;
+    right: 0;
+    color: red;
+    font-size: 12px;
+  }
+  
+  .error {
+    border: 2px solid red;
+  }
+  
+  .input-container {
+    position: relative;
+  }
+  
+  .input-container.error .error-message {
+    display: inline;
+  }
+
+  .result-top{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  @media screen and (max-width:768px) {
+
+    body{
+      height: 100%;
+      margin-top: 28px;
+      gap: 24px;
+    }
+    main{
+      flex-direction: column;
+    }
+  }
+  
+
+  :root{
+    
+  /* Primary */  
+
+  --strong-cyan: hsl(172, 67%, 45%);
+
+  /* Neutral*/
+
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+  }
