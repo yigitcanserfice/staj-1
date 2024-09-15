@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+body {
+  font-size: 14px;
+  background-color: var(--cream);
+  font-family: 'Montserrat', san-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+main {
+  margin: 30px auto;
+  padding: 0 30px;
+}
+
+.container {
+  background-color: var(--white);
+  max-width: 600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.imgwrapper img {
+  max-width: 100%;
+  display: inherit;
+}
+
+.content {
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.content h6 {
+  color: var(--dark-grayish-blue);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.content h1 {
+  font-family: 'Fraunces', san-serif;
+  color: var(--very-dark-blue);
+  line-height: 1em;
+  font-size: 36px;
+}
+
+.content p {
+  color: var(--dark-grayish-blue);
+  line-height: 1.3rem;
+}
+
+.price {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 12px;
+}
+
+.price .current-price {
+  font-family: 'Fraunces', san-serif;
+  color: var(--dark-cyan);
+  font-size: 24px;
+}
+
+.price .old-price {
+  color: var(--dark-grayish-blue);
+  text-decoration: line-through;
+  font-family: 'Montserrat', san-serif;
+}
+
+button {
+  background-color: var(--dark-cyan);
+  color: var(--white);
+  border: none;
+  border-radius: 12px;
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 12px;
+  cursor: pointer;
+  font-weight: 700;
+  width: 100%;
+}
+
+button:hover {
+  background-color: var(--very-dark-cyan);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 650px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .imgwrapper img {
+    max-height: 450px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .content {
+    gap: 12px;
+  }
+}
+@media (max-width: 375px) {
+  main {
+    margin: 15px auto;
+    padding: 0 15px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .imgwrapper img {
+    max-height: 290px;
+  }
+}
+
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --very-dark-cyan: hsl(157, 38%, 18%);
+  --cream: hsl(30, 38%, 92%);
+
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
