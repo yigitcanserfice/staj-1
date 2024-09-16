@@ -1,0 +1,17 @@
+<svg width="400" height="50" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <defs>
+  <linearGradient y2="0" x2="1" y1="0" x1="0" id="svg_1">
+   <stop offset="0" stop-color="rgb(51,158,204)"/>
+   <stop offset="1" stop-color="rgb(100,225,217)"/>
+  </linearGradient>
+  <linearGradient y2="0" x2="1" y1="0" x1="0" id="svg_2">
+   <stop offset="0" stop-color="rgb(100,225,217)"/>
+   <stop offset="1" stop-color="rgb(51,158,204)"/>
+  </linearGradient>
+ </defs>
+ <g>
+  <rect fill="url(#svg_1)" height="50" width="200" y="0" x="0"/>
+  <rect fill="url(#svg_2)" height="50" width="200" y="0" x="200"/>
+ </g>
+</svg>
